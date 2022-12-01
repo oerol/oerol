@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+  font-family: Cascadia Code;
+}
+
+body {
+  margin: 0;
+  background-color: red;
+}
