@@ -64,6 +64,10 @@ main {
 
 main a {
   border-bottom: 3px solid rgb(108, 108, 108);
+  transition: 0.1s ease-out border;
+}
+main a:hover {
+  border-bottom: 3px solid rgb(0, 0, 0);
 }
 
 p {
