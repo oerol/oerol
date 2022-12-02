@@ -41,6 +41,16 @@ header {
 }
 
 nav > a {
-  padding: 0 10px;
+  padding: 5px 15px;
   color: var(--secondary-text-color);
+
+  border-radius: 3px;
+  transition: 0.2s ease-out background-color;
+}
+
+nav > a:hover {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+nav > a:active {
+  background-color: rgba(0, 0, 0, 0.22);
 }
