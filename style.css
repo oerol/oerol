@@ -4,6 +4,7 @@
 
   --background-color: rgb(238, 238, 238);
   --primary-text-color: rgb(0, 0, 0);
+  --secondary-text-color: rgb(50, 50, 50);
 
   color: var(--primary-text-color);
 }
@@ -33,4 +34,5 @@ header {
 
 nav > a {
   padding: 0 10px;
+  color: var(--secondary-text-color);
 }
