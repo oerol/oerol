@@ -6,6 +6,8 @@
   --primary-text-color: rgb(0, 0, 0);
   --secondary-text-color: rgb(50, 50, 50);
 
+  --divider-color: rgb(180, 180, 180);
+
   color: var(--primary-text-color);
 }
 
@@ -26,7 +28,7 @@ header {
   justify-content: space-between;
 
   padding: 25px 30px;
-  border-bottom: 1px solid rgb(179, 179, 179);
+  border-bottom: 1px solid var(--divider-color);
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) padding;
   background: rgba(255, 255, 255, 0.95);
 }
@@ -34,6 +36,7 @@ header {
 @media (max-width: 600px) {
   header {
     bottom: 0;
+    border-top: 1px solid var(--divider-color);
   }
 }
 
