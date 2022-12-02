@@ -30,3 +30,7 @@ header {
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) padding;
   background: rgba(255, 255, 255, 0.95);
 }
+
+nav > a {
+  padding: 0 10px;
+}
