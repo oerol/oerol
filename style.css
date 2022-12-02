@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Cascadia Code;
+  src: url("./assets/CascadiaCode.woff2") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   font-family: Cascadia Code;
