@@ -1,9 +1,32 @@
 * {
   box-sizing: border-box;
   font-family: Cascadia Code;
+
+  --background-color: rgb(238, 238, 238);
+  --primary-text-color: rgb(0, 0, 0);
+
+  color: var(--primary-text-color);
 }
 
 body {
   margin: 0;
-  background-color: red;
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 25px 30px;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) padding;
+  background: rgba(255, 255, 255, 0.95);
 }
