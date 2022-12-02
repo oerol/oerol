@@ -40,6 +40,10 @@ header {
   background: rgba(255, 255, 255, 0.95);
 }
 
+#logo:hover {
+  text-transform: uppercase;
+}
+
 nav > a {
   padding: 5px 15px;
   color: var(--secondary-text-color);
@@ -87,6 +91,10 @@ p {
 
     padding: 15px 15px;
     border-top: 1px solid var(--divider-color);
+  }
+
+  nav > a {
+    padding: 5px 3px;
   }
 
   #main-wrapper {
