@@ -21,7 +21,6 @@ a {
 header {
   position: fixed;
   width: 100%;
-  top: 0;
 
   display: flex;
   justify-content: space-between;
@@ -30,6 +29,12 @@ header {
   border-bottom: 1px solid rgb(179, 179, 179);
   transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1) padding;
   background: rgba(255, 255, 255, 0.95);
+}
+
+@media (max-width: 600px) {
+  header {
+    bottom: 0;
+  }
 }
 
 nav > a {
