@@ -62,6 +62,10 @@ main {
   max-width: 800px;
 }
 
+main a {
+  border-bottom: 3px solid rgb(108, 108, 108);
+}
+
 p {
   color: var(--paragraph-text-color);
   line-height: 2rem;
