@@ -160,7 +160,11 @@ hr {
   border: none;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  padding: 10px 0px;
+}
+
+.list-item:hover > .list-item-location::before {
+  content: "> ";
 }
 
 .list-item-title,
