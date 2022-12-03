@@ -151,3 +151,24 @@ hr {
   border: none;
   background-position: left center;
 }
+
+.list {
+  margin-bottom: 40px;
+}
+
+.list-item {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.list-item-title,
+.list-item-date {
+  color: #808080;
+}
+
+.list-item-date {
+  display: inline-block;
+  width: 100px;
+}
