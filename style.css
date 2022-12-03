@@ -1,6 +1,11 @@
 @font-face {
   font-family: Cascadia Code;
-  src: url("./assets/CascadiaCode.woff2") format("truetype");
+  src: url("./assets/CascadiaCode.woff2") format("woff2");
+}
+@font-face {
+  font-family: Cascadia Code;
+  src: url("./assets/CascadiaCode-Bold.woff2") format("woff2");
+  font-weight: bold;
 }
 
 * {
@@ -163,16 +168,38 @@ hr {
   padding: 10px 0px;
 }
 
-.list-item:hover > .list-item-location::before {
-  content: "> ";
-}
-
 .list-item-title,
 .list-item-date {
   color: #808080;
 }
 
+.list-item-location {
+  color: var(--secondary-text-color);
+  font-weight: bold;
+}
+.list-item-title {
+  margin-right: 15px;
+}
 .list-item-date {
-  display: inline-block;
   width: 100px;
+}
+
+.list-item-spacer {
+  flex-grow: 1;
+}
+
+@media (max-width: 850px) {
+  .list-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  .list-item-spacer {
+    position: absolute; /* Exclude spacer from flex calculation */
+  }
+
+  h2 {
+    margin: 5px 0;
+  }
 }
