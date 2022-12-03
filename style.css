@@ -71,11 +71,11 @@ main {
   max-width: 800px;
 }
 
-main a {
+p > a {
   border-bottom: 3px solid rgb(108, 108, 108);
   transition: 0.1s ease-out border;
 }
-main a:hover {
+p > a:hover {
   border-bottom: 3px solid rgb(0, 0, 0);
 }
 
@@ -104,4 +104,41 @@ p {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.contact-container {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  border: none;
+  height: 32px;
+  width: 32px;
+  display: block;
+}
+
+.github-icon {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+}
+
+.button {
+  background-color: rgb(95, 95, 95);
+  border: 1px solid rgb(54, 54, 54);
+  border-bottom: 3px solid rgb(0, 0, 0);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+
+  transition: 0.2s ease-out border, 0.2s ease-out background-color;
+}
+
+.button:hover {
+  background-color: rgb(80, 80, 80);
+}
+.button:active {
+  border-bottom: 1px solid rgb(54, 54, 54);
 }
