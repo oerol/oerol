@@ -142,3 +142,12 @@ p {
 .button:active {
   border-bottom: 1px solid rgb(54, 54, 54);
 }
+
+hr {
+  margin: 30px 0;
+  height: 30px;
+  background-image: url(assets/lines.svg);
+  background-repeat: repeat-x;
+  border: none;
+  background-position: left center;
+}
