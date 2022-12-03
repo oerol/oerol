@@ -133,14 +133,14 @@ p {
   padding: 5px 10px;
   border-radius: 0.5rem;
 
-  transition: 0.2s ease-out border, 0.2s ease-out background-color;
+  transition: 0.1s ease-out border, 0.2s ease-out background-color;
 }
 
 .button:hover {
   background-color: rgb(80, 80, 80);
 }
 .button:active {
-  border-bottom: 1px solid rgb(54, 54, 54);
+  border-bottom: 3px solid rgba(54, 54, 54, 0);
 }
 
 hr {
