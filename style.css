@@ -117,14 +117,14 @@ p {
   gap: 10px;
 }
 
-.icon {
+#github-logo {
   border: none;
   height: 32px;
   width: 32px;
   display: block;
 }
 
-.github-icon {
+.icon {
   height: 32px;
   width: 32px;
   display: inline-block;
@@ -227,4 +227,16 @@ h2 {
 
 .project-description {
   font-size: 14px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  background-color: rgb(220, 220, 220);
+  border-radius: 5px;
+  padding: 10px;
+
+  margin-bottom: 10px;
 }
