@@ -210,3 +210,16 @@ h2 {
     margin: 5px 0;
   }
 }
+
+#projects {
+  margin-top: 40px;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.project-description {
+  font-size: 15px;
+}
