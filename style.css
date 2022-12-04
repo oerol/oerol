@@ -1,10 +1,10 @@
 @font-face {
   font-family: Cascadia Code;
-  src: url("./assets/CascadiaCode.woff2") format("woff2");
+  src: url("./assets/fonts/CascadiaCode.woff2") format("woff2");
 }
 @font-face {
   font-family: Cascadia Code;
-  src: url("./assets/CascadiaCode-Bold.woff2") format("woff2");
+  src: url("./assets/fonts/CascadiaCode-Bold.woff2") format("woff2");
   font-weight: bold;
 }
 
