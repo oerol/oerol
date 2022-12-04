@@ -239,4 +239,10 @@ h2 {
   padding: 10px;
 
   margin-bottom: 10px;
+
+  transition: 0.3s ease-out background-color;
+}
+
+.file:hover {
+  background-color: rgb(200, 200, 200);
 }
