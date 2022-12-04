@@ -215,11 +215,16 @@ h2 {
   margin-top: 40px;
 }
 
+.project {
+  margin-bottom: 80px;
+}
+
 .project-image {
   width: 100%;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .project-description {
-  font-size: 15px;
+  font-size: 14px;
 }
