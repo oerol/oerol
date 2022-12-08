@@ -262,3 +262,39 @@ h2 {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(85, 85, 85);
 }
+
+#cursor {
+  display: inline-block;
+  width: 3px;
+  height: 31px;
+  background-color: black;
+  margin: 25px 4px;
+  transition: 0.5s ease-out opacity;
+}
+
+.blinking {
+  animation: cursor-blink 0.4s linear infinite alternate;
+}
+
+.invincible {
+  opacity: 0;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#welcome {
+  display: flex;
+}
