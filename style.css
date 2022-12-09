@@ -290,6 +290,7 @@ h2 {
   background-color: black;
   margin: 25px 4px;
   transition: 0.5s ease-out opacity;
+  z-index: -1;
 }
 
 .blinking {
