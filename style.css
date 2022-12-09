@@ -168,6 +168,21 @@ hr {
   padding: 10px 0px;
 }
 
+.list-item-padding {
+  white-space: break-word;
+  word-break: break-all;
+  padding: 10px 20px;
+  line-height: 32px;
+}
+
+.centered-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
 .list-item-title,
 .list-item-date {
   color: #808080;
@@ -297,4 +312,20 @@ h2 {
 
 #welcome {
   display: flex;
+}
+
+.list-item-experience {
+  width: 60px;
+  height: 20px;
+  background-color: rgb(201, 201, 201);
+  border-radius: 5px;
+}
+
+.list-item-experience-container {
+  display: flex;
+  gap: 20px;
+}
+
+.green {
+  background-color: rgb(101, 172, 101);
 }
