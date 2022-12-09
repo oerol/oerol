@@ -168,19 +168,20 @@ hr {
   padding: 10px 0px;
 }
 
-.list-item-padding {
-  white-space: break-word;
-  word-break: break-all;
-  padding: 10px 20px;
-  line-height: 32px;
-}
-
 .centered-list {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
   flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.centered-list > span::after {
+  content: ",";
+}
+.centered-list > span:last-child::after {
+  content: "";
 }
 
 .list-item-title,
@@ -219,6 +220,10 @@ h2 {
 
   .list-item-spacer {
     position: absolute; /* Exclude spacer from flex calculation */
+  }
+
+  .centered-list {
+    justify-content: flex-start;
   }
 
   h2 {
