@@ -335,3 +335,7 @@ h2 {
 .green {
   background-color: rgb(101, 172, 101);
 }
+
+.centered-list > img {
+  width: 30px;
+}
