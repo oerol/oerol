@@ -249,6 +249,14 @@ h2 {
   font-size: 14px;
 }
 
+.project-button {
+  display: inline-block;
+  margin-top: 20px;
+}
+.project-button > img {
+  width: 10px;
+}
+
 .project-link {
   display: flex;
   align-items: center;
