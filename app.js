@@ -11,7 +11,6 @@ async function handleWelcomeMessage() {
   cursor.classList.remove("blinking");
   for (let i = 0; i < welcomeText.length; i++) {
     let character = welcomeText.charAt(i);
-    console.log(character);
     welcomeTextElement.innerHTML += character;
     await new Promise((r) => setTimeout(r, 90 - i * 5)); // increasingly types faster
   }
