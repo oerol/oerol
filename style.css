@@ -368,3 +368,12 @@ footer {
 .mt-40 {
   margin-top: 40px;
 }
+
+#impressum {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+.impressum-section {
+  margin-bottom: 10px;
+}
