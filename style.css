@@ -377,3 +377,11 @@ footer {
 .impressum-section {
   margin-bottom: 10px;
 }
+
+#datenschutz h2 {
+  margin-bottom: 40px;
+}
+
+#ds-impressum > div {
+  margin-bottom: 5px;
+}
