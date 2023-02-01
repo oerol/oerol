@@ -8,7 +8,6 @@ on:
 env:
   SERVER_HOST: access935892104.webspace-data.io
   SERVER_USER: u109668880
-  SERVER_PASSWORD: Songoku10!
 
 jobs:
   deploy:
@@ -18,8 +17,19 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Connect via SSH
-      run: sshpass -p ${{ env.SERVER_PASSWORD }} ssh -tt ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}
+    - name: Build code
+      run: |
+        # Add your build commands here
 
+    - name: Connect via SSH
+      uses: actions/ssh-action@0.3.0
+      with:
+        host: ${{ env.SERVER_HOST }}
+        username: ${{ env.SERVER_USER }}
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - name: Deploy via SSH
-      run: rsync -avz . ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:/portfolio
+      env:
+        DEPLOY_DIR: /portfolio
+      run:
+        rsync -avz --delete build/ ${DEPLOY_DIR}
+        ssh ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }} 'cd ${DEPLOY_DIR}'
