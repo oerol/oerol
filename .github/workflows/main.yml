@@ -23,14 +23,4 @@ jobs:
         # Add your build commands here
 
     - name: Deploy via SSH
-      uses: actions/ssh-action@0.3.0
-      with:
-        host: ${{ env.SERVER_HOST }}
-        username: ${{ env.SERVER_USER }}
-        private-key: ${{ env.SERVER_PASSWORD }}
-      env:
-        DEPLOY_DIR: /portfolio
-      run: |
-        # Add your deployment commands here
-        rsync -avz --delete build/ ${DEPLOY_DIR}
-        ssh ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }} 'cd ${DEPLOY_DIR}'
+      run: rsync -avz . ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:/portfolio
