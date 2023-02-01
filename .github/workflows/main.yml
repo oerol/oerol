@@ -1,0 +1,36 @@
+name: Deploy via SSH
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  SERVER_HOST: access935892104.webspace-data.io
+  SERVER_USER: u109668880
+  SERVER_PASSWORD: Songoku10!
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build code
+      run: |
+        # Add your build commands here
+
+    - name: Deploy via SSH
+      uses: actions/ssh-action@0.3.0
+      with:
+        host: ${{ env.SERVER_HOST }}
+        username: ${{ env.SERVER_USER }}
+        private-key: ${{ env.SERVER_PASSWORD }}
+      env:
+        DEPLOY_DIR: /portfolio
+      run: |
+        # Add your deployment commands here
+        rsync -avz --delete build/ ${DEPLOY_DIR}
+        ssh ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }} 'cd ${DEPLOY_DIR}'
