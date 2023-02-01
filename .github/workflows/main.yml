@@ -18,9 +18,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Build code
-      run: |
-        # Add your build commands here
+    - name: Connect via SSH
+      run: ssh ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}
 
     - name: Deploy via SSH
       run: rsync -avz . ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }}:/portfolio
