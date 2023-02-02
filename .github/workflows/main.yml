@@ -1,0 +1,31 @@
+name: Deploy via SSH
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  SERVER_HOST: access935892104.webspace-data.io
+  SERVER_USER: u109668880
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build code
+      run: |
+        # Add your build commands here
+
+    - name: Deploy via SSH
+      uses: appleboy/scp-action@master
+      with:
+        HOST: ${{ env.SERVER_HOST }}
+        USERNAME: ${{ env.SERVER_USER }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        target: "./portfolio/"
+        source: "./*"
