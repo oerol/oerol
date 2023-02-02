@@ -21,7 +21,7 @@ jobs:
       run: |
         # Add your build commands here
 
-    - name: executing remote ssh commands using ssh key
+    - name: Deploy via SSH
       uses: appleboy/scp-action@master
       with:
         HOST: ${{ env.SERVER_HOST }}
@@ -29,10 +29,3 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         target: "./portfolio/"
         source: "./*"
-        
-    - name: Deploy via SSH
-      env:
-        DEPLOY_DIR: /portfolio
-      run:
-        rsync -avz --delete build/ ${DEPLOY_DIR}
-        ssh ${{ env.SERVER_USER }}@${{ env.SERVER_HOST }} 'cd ${DEPLOY_DIR}'
